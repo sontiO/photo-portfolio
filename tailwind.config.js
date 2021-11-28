@@ -1,0 +1,26 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+module.exports = {
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      fontFamily: {
+        cormorant: "'Cormorant Upright', serif;",
+        lato: "'Lato', sans-serif;",
+      },
+      colors: {
+        black: "#333333",
+      },
+    },
+    screens: {
+      "5s": "320",
+      ...defaultTheme.screens,
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
