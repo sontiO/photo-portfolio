@@ -2,19 +2,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen flex p-4 md:p-12 ">
-      <div className="md:w-4/6 5s:w-full flex flex-col justify-between mr-24 ">
+    <div className="w-full h-screen flex p-8 md:p-12 ">
+      <div className="md:w-4/6 5s:w-full flex flex-col justify-between mr-8 ">
         <div className="flex flex-row h-full w-full ">
           <div className=" h-full w-full flex flex-col font-lato font-light text-2xl -space-y-1 uppercase text-black">
             <p className="tracking-tight">Jonas</p>
             <p className="tracking-tighter">Sontheim</p>
-            <div className=" w-screen pr-8 h-full md:hidden">
+            <div className=" w-screen pr-8 h-full md:hidden ">
               <div className="mt-5 h-full w-full">
-                <Image
-                  width={400}
-                  height={500}
-                  src="https://images.unsplash.com/photo-1551576693-ddc1fee0a6aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-                />
+                <Image width={720} height={1024} src="/kickflipMork.jpg" />
               </div>
             </div>
           </div>
@@ -24,7 +20,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row justify-between ">
+        <div className="flex flex-row justify-between mt-4 pr-4 ">
           <div className="flex-col -space-y-2 md:-space-y-5 text-black">
             <p className=" font-cormorant text-4xl md:text-8xl uppercase block md:hidden ">
               hof
@@ -43,8 +39,10 @@ export default function Home() {
           </nav>
         </div>
       </div>
-      <div className="md:w-2/6 5s:w-full justify-center items-center bg-blue-500 m-4 hidden md:flex">
-        <div className="w-10 h-10"></div>
+      <div className="md:w-2/6 5s:w-full justify-center  m-4 hidden md:flex ">
+        <div className="w-fill h-auto overflow-y-scroll">
+          <Image src="/traintracks.png" width={538} height={846} />
+        </div>
       </div>
     </div>
   );
