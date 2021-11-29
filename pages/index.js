@@ -1,12 +1,17 @@
 import Image from "next/image";
-import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@LjXvDAgjRtXggpcqlbnP";
+import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@ZlrE80R2kBHLmRD6ENtZ";
+import Modal from "../components/Modal";
+import { useState } from "react";
+
 export default function Home() {
+  let [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <div className="flex w-full h-screen p-8 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
-            <div className="flex flex-col w-full h-full -space-y-1 text-2xl font-light text-black uppercase font-lato">
+            <div className="flex flex-col w-full h-full -space-y-1 text-2xl font-light text-black uppercase font-Lato">
               <p className="tracking-tight">Jonas</p>
               <p className="tracking-tighter">Sontheim</p>
               <div className="w-screen h-full pr-8 md:hidden">
@@ -52,10 +57,11 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="flex flex-row h-1/6">
+          <div className="flex flex-row h-1/6 " onClick={() => setIsOpen(true)}>
             <PicturePreview title="fomapan 100" subtitle="more from roll:" />
             <PicturePreview image="/kickflipMork.jpg" />
           </div>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         cormorant: "'Cormorant Upright', serif;",
-        lato: "'Lato', sans-serif;",
+        Lato: "'Lato', sans-serif;",
       },
       colors: {
         black: "#333333",
