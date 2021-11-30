@@ -48,6 +48,7 @@ export default function Home() {
             </div>
             <nav className="flex flex-row items-end mb-6 ml-6 mr-4 space-x-3 text-black md:mb-0 md:mr-0">
               <ul className="flex flex-row space-x-3">
+                <li>gallery</li>
                 <li>prints</li>
                 <li>about</li>
                 <li>35mm</li>
@@ -58,17 +59,15 @@ export default function Home() {
         <div className="flex-col justify-center hidden m-4 md:w-2/6 5s:w-full md:flex">
           <div className="w-full overflow-y-hidden h-5/6">
             <Image
-              src="/contactcombined.jpg"
-              width={2679}
-              height={3677}
-              layout="responsive"
-              quality={100}
+              width={724}
+              height={924}
+              src="/contactcombinedSmall.jpg"
               priority
             />
           </div>
           <div className="flex flex-row h-1/6 " onClick={() => setIsOpen(true)}>
             <PicturePreview title="fomapan 100" subtitle="more from roll:" />
-            <PicturePreview image="/kickflipMork.jpg" />
+            <PicturePreview image="/traintracks.png" />
           </div>
           <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
