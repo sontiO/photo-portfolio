@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@ZlrE80R2kBHLmRD6ENtZ";
+import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@B7wzXOg2xPIuA6Xwqazp";
 import Modal from "../components/Modal";
 import { useState } from "react";
 
