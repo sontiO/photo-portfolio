@@ -20,9 +20,10 @@ export default function Home() {
                   className="w-full h-full my-4 "
                 >
                   <Image
-                    width={1958}
-                    height={2688}
+                    width={724}
+                    height={924}
                     src="/contactcombinedSmall.jpg"
+                    priority
                   />
                 </div>
               </div>
@@ -62,6 +63,7 @@ export default function Home() {
               height={3677}
               layout="responsive"
               quality={100}
+              priority
             />
           </div>
           <div className="flex flex-row h-1/6 " onClick={() => setIsOpen(true)}>
