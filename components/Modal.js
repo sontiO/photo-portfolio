@@ -43,7 +43,7 @@ export default function Example({ isOpen, setIsOpen, image }) {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
+            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform scale-90 bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
               <div className="">
                 <PictureView />
               </div>

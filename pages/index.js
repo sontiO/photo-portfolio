@@ -15,8 +15,15 @@ export default function Home() {
               <p className="tracking-tight">Jonas</p>
               <p className="tracking-tighter">Sontheim</p>
               <div className="w-screen h-full pr-8 md:hidden">
-                <div className="w-full h-full my-4 ">
-                  <Image width={720} height={1024} src="/kickflipMork.jpg" />
+                <div
+                  onClick={() => setIsOpen(true)}
+                  className="w-full h-full my-4 "
+                >
+                  <Image
+                    width={1958}
+                    height={2688}
+                    src="/contactcombinedSmall.jpg"
+                  />
                 </div>
               </div>
             </div>
@@ -27,7 +34,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row justify-between pr-4 mt-4 ">
-            <div className="flex-col -space-y-2 text-black md:-space-y-5">
+            <div className="flex-col mb-6 text-black md:mb-0">
               <p className="block text-4xl uppercase font-cormorant md:text-8xl md:hidden">
                 hof
               </p>
@@ -38,7 +45,7 @@ export default function Home() {
                 film
               </p>
             </div>
-            <nav className="flex flex-row items-end mb-1 ml-10 mr-4 space-x-3 text-black md:mb-3 md:mr-0">
+            <nav className="flex flex-row items-end mb-6 ml-6 mr-4 space-x-3 text-black md:mb-0 md:mr-0">
               <ul className="flex flex-row space-x-3">
                 <li>prints</li>
                 <li>about</li>
