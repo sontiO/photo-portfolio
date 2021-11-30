@@ -50,9 +50,9 @@ export default function Home() {
         <div className="flex-col justify-center hidden m-4 md:w-2/6 5s:w-full md:flex">
           <div className="w-full overflow-y-hidden h-5/6">
             <Image
-              src="/traintracks.png"
-              width={538}
-              height={846}
+              src="/contactcombined.jpg"
+              width={2679}
+              height={3677}
               layout="responsive"
               quality={100}
             />

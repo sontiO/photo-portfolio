@@ -68,11 +68,12 @@ export default function Example({ isOpen, setIsOpen, image }) {
 function PictureView() {
   return (
     <div className="w-full h-full">
-      <div className="flex flex-col bg-red-600 h-3/5">
+      <div className="flex flex-col h-3/5">
         <Image
           src="/underExposeOverDevfoma100008-instagram.jpg"
           width={1129}
           height={1153}
+          priority={true}
         />
       </div>
       <div className="flex flex-row justify-between mx-10 my-4">
