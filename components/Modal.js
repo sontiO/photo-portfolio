@@ -1,8 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@B7wzXOg2xPIuA6Xwqazp";
+import { ChevronLeftIcon } from "@heroicons/react/solid";
 
-export default function Example({ isOpen, setIsOpen }) {
+import Image from "next/image";
+
+export default function Example({ isOpen, setIsOpen, image }) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -39,15 +43,18 @@ export default function Example({ isOpen, setIsOpen }) {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
-              <div className="bg-red-600">rebuild modal from framer</div>
-              <div className="mt-5 sm:mt-6">
+            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
+              <div className="">
+                <PictureView />
+              </div>
+              <div className="mt-4 sm:mt-6">
                 <button
                   type="button"
-                  className="inline-flex justify-center w-full px-4 py-2 text-lg font-semibold text-gray-800 rounded-md font-cormorant focus:outline-none "
+                  className="inline-flex justify-start w-full px-8 py-2 text-base font-light text-gray-700 rounded-md font-lato focus:outline-none "
                   onClick={() => setIsOpen(false)}
                 >
-                  Close
+                  <ChevronLeftIcon className="w-6 h-6 text-gray-600" />
+                  back
                 </button>
               </div>
             </div>
@@ -55,5 +62,33 @@ export default function Example({ isOpen, setIsOpen }) {
         </div>
       </Dialog>
     </Transition.Root>
+  );
+}
+
+function PictureView() {
+  return (
+    <div className="w-full h-full">
+      <div className="flex flex-col bg-red-600 h-3/5">
+        <Image
+          src="/underExposeOverDevfoma100008-instagram.jpg"
+          width={1129}
+          height={1153}
+        />
+      </div>
+      <div className="flex flex-row justify-between mx-10 my-4">
+        <div className="flex flex-col -space-y-2 ">
+          <p className="font-medium font-Lato">film name</p>
+          <div>
+            <p className="font-light text-gray-500 font-Lato">
+              more from roll:
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col -space-y-2 ">
+          <p className="font-light text-gray-500 font-Lato">Date</p>
+          <p className="font-medium font-Lato">Camera Model</p>
+        </div>
+      </div>
+    </div>
   );
 }
