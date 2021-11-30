@@ -5,6 +5,7 @@ import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@B7wzXOg2
 import { ChevronLeftIcon } from "@heroicons/react/solid";
 
 import Image from "next/image";
+import { EmblaCarousel } from "./Carousel";
 
 export default function Example({ isOpen, setIsOpen, image }) {
   return (
@@ -69,12 +70,13 @@ function PictureView() {
   return (
     <div className="w-full h-full">
       <div className="flex flex-col h-3/5">
-        <Image
+        {/*         <Image
           src="/underExposeOverDevfoma100008-instagram.jpg"
           width={1129}
           height={1153}
           priority={true}
-        />
+        /> */}
+        <EmblaCarousel />
       </div>
       <div className="flex flex-row justify-between mx-10 my-4">
         <div className="flex flex-col -space-y-2 ">
