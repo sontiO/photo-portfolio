@@ -9,14 +9,14 @@ export const EmblaCarousel = () => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         <div className="embla__slide">
+          {" "}
           <Image
-            src="/sittingWben.jpg"
+            src="/bikerinpark.jpg"
             width={1620}
             height={1147}
             priority={true}
           />
         </div>
-
         <div className="embla__slide">
           {" "}
           <Image
@@ -26,10 +26,10 @@ export const EmblaCarousel = () => {
             priority={true}
           />
         </div>
+
         <div className="embla__slide">
-          {" "}
           <Image
-            src="/bikerinpark.jpg"
+            src="/sittingWben.jpg"
             width={1620}
             height={1147}
             priority={true}

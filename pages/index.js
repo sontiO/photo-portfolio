@@ -2,6 +2,7 @@ import Image from "next/image";
 import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@agVUna9Z0AUdc2Q1yq4A";
 import Modal from "../components/Modal";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
@@ -48,10 +49,13 @@ export default function Home() {
             </div>
             <nav className="flex flex-row items-end mb-6 ml-6 mr-4 space-x-3 text-black md:mb-0 md:mr-0">
               <ul className="flex flex-row space-x-3">
-                <li>gallery</li>
+                <Link href="/gallery">
+                  <a>
+                    <li>gallery</li>
+                  </a>
+                </Link>
                 <li>prints</li>
                 <li>about</li>
-                <li>35mm</li>
               </ul>
             </nav>
           </div>
@@ -72,10 +76,10 @@ export default function Home() {
             <PicturePreview
               title="Fomapan 100"
               subtitle="more from this roll:"
-              image="/sittingWBen.jpg"
+              image="/bikerinpark.jpg"
             />
             <PicturePreview image="/foggysky.jpg" />
-            <PicturePreview image="/bikerinpark.jpg" />
+            <PicturePreview image="/sittingWben.jpg" />
             <PicturePreview image="/homies.jpg" />
             <PicturePreview image="/fogboat.jpg" />
           </div>

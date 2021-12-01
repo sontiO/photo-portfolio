@@ -51,7 +51,7 @@ export default function Example({ isOpen, setIsOpen, image }) {
               <div className="mt-4 sm:mt-6">
                 <button
                   type="button"
-                  className="inline-flex justify-start w-full px-8 py-2 text-base font-light text-gray-700 rounded-md font-lato focus:outline-none "
+                  className="inline-flex justify-start w-full px-4 py-2 text-base font-light text-gray-700 rounded-md font-lato focus:outline-none "
                   onClick={() => setIsOpen(false)}
                 >
                   <ChevronLeftIcon className="w-6 h-6 text-gray-600" />
@@ -78,7 +78,7 @@ function PictureView() {
         /> */}
         <EmblaCarousel />
       </div>
-      <div className="flex flex-row justify-between mx-10 my-4">
+      <div className="flex flex-row justify-between mx-6 my-4">
         <div className="flex flex-col -space-y-1 ">
           <p className="font-medium font-Lato">Fomapan 100</p>
           <div className="flex flex-col -space-y-2">
