@@ -79,17 +79,18 @@ function PictureView() {
         <EmblaCarousel />
       </div>
       <div className="flex flex-row justify-between mx-10 my-4">
-        <div className="flex flex-col -space-y-2 ">
-          <p className="font-medium font-Lato">film name</p>
-          <div>
+        <div className="flex flex-col -space-y-1 ">
+          <p className="font-medium font-Lato">Fomapan 100</p>
+          <div className="flex flex-col -space-y-2">
+            <p className="font-light text-gray-500 font-Lato">homedev in d76</p>
             <p className="font-light text-gray-500 font-Lato">
-              more from roll:
+              epson flatbed scan
             </p>
           </div>
         </div>
         <div className="flex flex-col -space-y-2 ">
-          <p className="font-light text-gray-500 font-Lato">Date</p>
-          <p className="font-medium font-Lato">Camera Model</p>
+          <p className="font-light text-gray-500 font-Lato">October 2020</p>
+          <p className="font-medium font-Lato">Minolta X-570</p>
         </div>
       </div>
     </div>

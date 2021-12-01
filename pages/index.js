@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@B7wzXOg2xPIuA6Xwqazp";
+import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@agVUna9Z0AUdc2Q1yq4A";
 import Modal from "../components/Modal";
 import { useState } from "react";
 
@@ -34,8 +34,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-row justify-between pr-4 mt-4 ">
-            <div className="flex-col mb-6 text-black md:mb-0">
+          <div className="flex flex-row justify-between pr-4 mt-4 -mb-8">
+            <div className="flex-col mb-5 text-black md:mb-0">
               <p className="block text-4xl uppercase font-cormorant md:text-8xl md:hidden">
                 hof
               </p>
@@ -65,9 +65,19 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex flex-row h-1/6 " onClick={() => setIsOpen(true)}>
-            <PicturePreview title="fomapan 100" subtitle="more from roll:" />
-            <PicturePreview image="/traintracks.png" />
+          <div
+            className="flex flex-row w-full gap-3 py-2 h-1/6"
+            onClick={() => setIsOpen(true)}
+          >
+            <PicturePreview
+              title="Fomapan 100"
+              subtitle="more from this roll:"
+              image="/sittingWBen.jpg"
+            />
+            <PicturePreview image="/foggysky.jpg" />
+            <PicturePreview image="/bikerinpark.jpg" />
+            <PicturePreview image="/homies.jpg" />
+            <PicturePreview image="/fogboat.jpg" />
           </div>
           <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>

@@ -10,27 +10,41 @@ export const EmblaCarousel = () => {
       <div className="embla__container">
         <div className="embla__slide">
           <Image
-            src="/underExposeOverDevfoma100008-instagram.jpg"
-            width={1129}
-            height={1153}
+            src="/sittingWben.jpg"
+            width={1620}
+            height={1147}
+            priority={true}
+          />
+        </div>
+
+        <div className="embla__slide">
+          {" "}
+          <Image
+            src="/foggysky.jpg"
+            width={1620}
+            height={1147}
             priority={true}
           />
         </div>
         <div className="embla__slide">
           {" "}
           <Image
-            src="/underExposeOverDevfoma100008-instagram.jpg"
-            width={1129}
-            height={1153}
+            src="/bikerinpark.jpg"
+            width={1620}
+            height={1147}
             priority={true}
           />
         </div>
         <div className="embla__slide">
           {" "}
+          <Image src="/homies.jpg" width={1620} height={1147} priority={true} />
+        </div>
+        <div className="embla__slide">
+          {" "}
           <Image
-            src="/underExposeOverDevfoma100008-instagram.jpg"
-            width={1129}
-            height={1153}
+            src="/fogboat.jpg"
+            width={1620}
+            height={1147}
             priority={true}
           />
         </div>
