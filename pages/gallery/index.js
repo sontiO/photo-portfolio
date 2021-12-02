@@ -47,7 +47,7 @@ export default function Gallery() {
             <Image src="/beninTrees.jpg" width={1620} height={1147} />
           </div>
           <div className="overflow-hidden ">
-            <p className="max-w-xs mt-64 text-base font-lato">
+            <p className="max-w-xs text-base mt-52 font-lato">
               fomapan200 developed in <br />
               kodak d-76. circa september 2020 <br />
               Shot on Minolta X-570
