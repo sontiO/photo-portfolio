@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
-
   return (
     <div>
       <div className="flex w-full h-screen p-8 md:p-12 ">
