@@ -54,7 +54,7 @@ export default function Gallery() {
             </p>
             <Link href="/gallery/gallery2">
               <a>
-                <p className="absolute right-36">
+                <p className="absolute bottom-8 right-36">
                   01
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
