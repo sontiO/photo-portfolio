@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@agVUna9Z0AUdc2Q1yq4A";
+import PicturePreview from "https://framer.com/m/PicturePreview-Sh2e.js@skUhXXVfzXVGPcfiCx0q";
 import Modal from "../components/Modal";
 import { useState } from "react";
 import Link from "next/link";
@@ -35,19 +35,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-row justify-between pr-4 mt-4 -mb-8">
-            <div className="flex-col mb-5 text-black md:mb-0">
-              <p className="block text-4xl uppercase font-cormorant md:text-8xl md:hidden">
+          <div className="flex flex-row justify-between pr-4 mt-4 -mb-4">
+            <div className="flex flex-col text-black ">
+              <p className="-mb-2 text-4xl uppercase font-cormorant md:text-8xl md:hidden">
                 hof
               </p>
               <p className="text-4xl uppercase font-cormorant md:text-8xl">
                 on
               </p>
-              <p className="text-4xl uppercase font-cormorant md:text-8xl ">
+              <p className="-mt-2 -mb-3 text-4xl uppercase font-cormorant md:text-8xl">
                 film
               </p>
             </div>
-            <nav className="flex flex-row items-end mb-6 ml-6 mr-4 space-x-3 text-black md:mb-0 md:mr-0">
+            <nav className="flex flex-row items-end ml-6 mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
               <ul className="flex flex-row space-x-3">
                 <Link href="/gallery">
                   <a>
@@ -60,8 +60,8 @@ export default function Home() {
             </nav>
           </div>
         </div>
-        <div className="flex-col justify-center hidden m-4 md:w-2/6 5s:w-full md:flex">
-          <div className="w-full overflow-y-hidden h-5/6">
+        <div className="flex-col justify-between hidden h-full m-4 md:w-2/6 5s:w-full md:flex">
+          <div className="w-full overflow-x-hidden overflow-y-hidden ">
             <Image
               width={724}
               height={924}
@@ -69,20 +69,26 @@ export default function Home() {
               priority
             />
           </div>
-          <div
-            className="flex flex-row w-full gap-3 py-2 h-1/6"
-            onClick={() => setIsOpen(true)}
-          >
-            <PicturePreview
-              title="Fomapan 100"
-              subtitle="more from this roll:"
-              image="/bikerinpark.jpg"
-            />
-            <PicturePreview image="/foggysky.jpg" />
-            <PicturePreview image="/sittingWben.jpg" />
-            <PicturePreview image="/homies.jpg" />
-            <PicturePreview image="/fogboat.jpg" />
+          <div className="flex flex-col">
+            <h2 className="w-full my-3 text-sm text-gray-700 font-Lato">
+              more from this roll:
+            </h2>
+            <div
+              className="flex flex-row w-full gap-3 py-2 overflow-x-hidden"
+              onClick={() => setIsOpen(true)}
+            >
+              <PicturePreview
+                title="Fomapan 100"
+                subtitle="more from this roll:"
+                image="/bikerinpark.jpg"
+              />
+              <PicturePreview image="/foggysky.jpg" />
+              <PicturePreview image="/sittingWben.jpg" />
+              <PicturePreview image="/homies.jpg" />
+              <PicturePreview image="/fogboat.jpg" />
+            </div>
           </div>
+
           <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
