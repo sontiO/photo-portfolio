@@ -48,8 +48,9 @@ export default function Gallery() {
           </div>
           <div className="overflow-hidden ">
             <p className="max-w-xs mt-64 text-base font-lato">
-              Shot on fomapan200 and developed in kodak d-76. circa september
-              Minolta X-570
+              fomapan200 developed in <br />
+              kodak d-76. circa september 2020 <br />
+              Shot on Minolta X-570
             </p>
             <Link href="/gallery/gallery2">
               <a>
