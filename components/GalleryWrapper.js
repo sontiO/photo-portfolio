@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function GalleryWrapper({ children, page }) {
   return (
-    <div className="relative w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
+    <div className="relative w-screen h-screen overflow-x-hidden overflow-y-hidden ">
       <div className="text-2xl font-light text-black uppercase font-Lato">
         <Link href="/">
           <a>
-            <div className="flex flex-col -space-y-1">
+            <div className="flex flex-col -space-y-1 md:p-12">
               <p className="tracking-tight">Jonas</p>
               <p className="tracking-tighter">Sontheim</p>
             </div>

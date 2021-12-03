@@ -36,7 +36,7 @@ export default function Gallery2() {
         </div>
       </Mobile>
       <Desktop>
-        <GalleryWrapper page="02">gallery 2 desktop</GalleryWrapper>
+        <GalleryWrapper page="02"></GalleryWrapper>
       </Desktop>
     </div>
   );
