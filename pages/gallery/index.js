@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import ReactPhotoGrid from "react-photo-grid";
 import { useMediaQuery } from "react-responsive";
+import GalleryWrapper from "../../components/GalleryWrapper";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -29,16 +30,15 @@ export default function Gallery() {
   return (
     <div className="w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
       <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
-        <Link href="/">
-          <a>
-            <div className="flex flex-col -space-y-1">
-              <p className="tracking-tight">Jonas</p>
-              <p className="tracking-tighter">Sontheim</p>
-            </div>
-          </a>
-        </Link>
-
         <Desktop>
+          <Link href="/">
+            <a>
+              <div className="flex flex-col -space-y-1">
+                <p className="tracking-tight">Jonas</p>
+                <p className="tracking-tighter">Sontheim</p>
+              </div>
+            </a>
+          </Link>
           <div className="">
             <Image src="/tungintrees.jpg" width={1620} height={1147} />
           </div>
@@ -52,7 +52,7 @@ export default function Gallery() {
               kodak d-76. circa september 2020 <br />
               Shot on Minolta X-570
             </p>
-            <Link href="/gallery/gallery2">
+            <Link className="visible block" href="/gallery/gallery2">
               <a>
                 <p className="absolute bottom-8 right-36">
                   01
@@ -74,6 +74,12 @@ export default function Gallery() {
             <div className="absolute text-gray-500 divide-y-2 right-36 bottom-20" />
           </div>
         </Desktop>
+
+        <Mobile>
+          <GalleryWrapper page="01">
+            <div className="mt-48 font-cormorant">gallerly mobile view tbd</div>
+          </GalleryWrapper>
+        </Mobile>
       </div>
     </div>
   );

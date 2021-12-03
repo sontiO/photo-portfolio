@@ -1,3 +1,4 @@
+import GalleryWrapper from "./../../components/GalleryWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -22,44 +23,21 @@ export default function Gallery2() {
   }
 
   var imageData = ["/bentunnel.jpg", "/church.jpg", "/fogboat2.jpg"];
-  return <GalleryWrapper>content</GalleryWrapper>;
-}
-
-function GalleryWrapper({ children }) {
   return (
-    <div className="relative w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
-      <div className="text-2xl font-light text-black uppercase font-Lato">
-        <Link href="/">
-          <a>
-            <div className="flex flex-col -space-y-1">
-              <p className="tracking-tight">Jonas</p>
-              <p className="tracking-tighter">Sontheim</p>
-            </div>
-          </a>
-        </Link>
-        <div className="w-full h-full ">{children}</div>
-        <div>
-          <Link href="/gallery/gallery2">
-            <a>
-              <p className="absolute bottom-8 right-36">
-                01
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </p>
-            </a>
-          </Link>
+    <div>
+      <Mobile>
+        <div className="w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
+          <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
+            <GalleryWrapper page="02">
+              {" "}
+              <div className="mt-48 font-cormorant">gallerly 2 mobile tbd</div>
+            </GalleryWrapper>
+          </div>
         </div>
-      </div>
+      </Mobile>
+      <Desktop>
+        <GalleryWrapper page="02">gallery 2 desktop</GalleryWrapper>
+      </Desktop>
     </div>
   );
 }
