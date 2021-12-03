@@ -83,8 +83,8 @@ export default function Home() {
               />
               <PicturePreview image="/foggysky.jpg" />
               <PicturePreview image="/sittingWben.jpg" />
-              <PicturePreview image="/homies.jpg" />
               <PicturePreview image="/fogboat.jpg" />
+              <PicturePreview image="/fogboat2.jpg" />
             </div>
           </div>
 

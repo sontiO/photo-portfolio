@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import ReactPhotoGrid from "react-photo-grid";
 import { useMediaQuery } from "react-responsive";
+import Gallery from "react-photo-gallery";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -22,7 +23,64 @@ export default function Gallery2() {
     setModalOpen(true);
   }
 
-  var imageData = ["/bentunnel.jpg", "/church.jpg", "/fogboat2.jpg"];
+  const photos = [
+    {
+      src: "/120/1-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/2-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/3-instagram-2.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/4-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/cSticht-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/DSC_0416-instagram.jpg",
+      width: 1189,
+      height: 2125,
+    },
+    {
+      src: "/120/DSC_0423-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/goodone-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/rescan-instagram-2.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/rescan-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/stitchted-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+  ];
+
   return (
     <div>
       <Mobile>
@@ -36,7 +94,11 @@ export default function Gallery2() {
         </div>
       </Mobile>
       <Desktop>
-        <GalleryWrapper page="02"></GalleryWrapper>
+        <GalleryWrapper page="02">
+          <div className="p-8 -mt-16">
+            <Gallery photos={photos} />
+          </div>
+        </GalleryWrapper>
       </Desktop>
     </div>
   );

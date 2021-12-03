@@ -37,12 +37,17 @@ export const EmblaCarousel = () => {
         </div>
         <div className="embla__slide">
           {" "}
-          <Image src="/homies.jpg" width={1620} height={1147} priority={true} />
+          <Image
+            src="/fogboat.jpg"
+            width={1620}
+            height={1147}
+            priority={true}
+          />
         </div>
         <div className="embla__slide">
           {" "}
           <Image
-            src="/fogboat.jpg"
+            src="/fogboat2.jpg"
             width={1620}
             height={1147}
             priority={true}

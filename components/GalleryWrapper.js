@@ -12,7 +12,7 @@ export default function GalleryWrapper({ children, page }) {
             </div>
           </a>
         </Link>
-        <div className="w-full h-full ">{children}</div>
+        <div className="w-full h-full">{children}</div>
         <div>
           <Link href="/gallery/gallery2">
             <a>
