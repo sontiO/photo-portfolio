@@ -2,7 +2,7 @@ import GalleryWrapper from "./../../components/GalleryWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import ReactPhotoGrid from "react-photo-grid";
 import { useMediaQuery } from "react-responsive";
 import Gallery from "react-photo-gallery";
 
@@ -16,7 +16,7 @@ const Mobile = ({ children }) => {
   return isMobile ? children : null;
 };
 
-export default function Gallery2() {
+export default function gallery3() {
   const [modalOpen, setModalOpen] = useState(false);
 
   function handleImageClick() {
@@ -91,7 +91,7 @@ export default function Gallery2() {
       </Mobile>
       <Desktop>
         <GalleryWrapper page="02" href="/gallery/gallery3">
-          <div className="h-screen p-8 mb-20 ">
+          <div className="grid p-8 place-items-end">
             <div className="w-3/4">
               <Gallery photos={photos} />
             </div>

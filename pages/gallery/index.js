@@ -76,7 +76,7 @@ export default function Gallery() {
         </Desktop>
 
         <Mobile>
-          <GalleryWrapper page="01">
+          <GalleryWrapper page="01" href="/gallery/gallery2">
             <div className="mt-48 font-cormorant">gallerly mobile view tbd</div>
           </GalleryWrapper>
         </Mobile>
