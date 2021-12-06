@@ -25,18 +25,17 @@ export default function gallery3() {
 
   const photos = [
     {
-      src: "/120/cSticht-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
-
-    {
-      src: "/120/DSC_0423-instagram.jpg",
+      src: "/120/rescan-instagram-2.jpg",
       width: 2160,
       height: 2125,
     },
     {
-      src: "/120/goodone-instagram.jpg",
+      src: "/120/rescan-instagram.jpg",
+      width: 2160,
+      height: 2125,
+    },
+    {
+      src: "/120/stitchted-instagram.jpg",
       width: 2160,
       height: 2125,
     },
@@ -47,15 +46,15 @@ export default function gallery3() {
       <Mobile>
         <div className="w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
           <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
-            <GalleryWrapper page="02">
+            <GalleryWrapper page="04">
               {" "}
-              <div className="mt-48 font-cormorant">gallerly 2 mobile tbd</div>
+              <div className="mt-48 font-cormorant">gallerly 4 mobile tbd</div>
             </GalleryWrapper>
           </div>
         </div>
       </Mobile>
       <Desktop>
-        <GalleryWrapper page="03" href="/gallery/gallery4">
+        <GalleryWrapper page="04" href="/gallery/gallery3">
           <div className="grid p-8 place-items-end">
             <div className="w-3/4">
               <Gallery photos={photos} />

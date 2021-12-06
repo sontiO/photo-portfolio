@@ -39,42 +39,6 @@ export default function Gallery2() {
       width: 2160,
       height: 2125,
     },
-    {
-      src: "/120/4-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
-    {
-      src: "/120/cSticht-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
-
-    {
-      src: "/120/DSC_0423-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
-    {
-      src: "/120/goodone-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
-    {
-      src: "/120/rescan-instagram-2.jpg",
-      width: 2160,
-      height: 2125,
-    },
-    {
-      src: "/120/rescan-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
-    {
-      src: "/120/stitchted-instagram.jpg",
-      width: 2160,
-      height: 2125,
-    },
   ];
 
   return (
