@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex w-full h-screen p-4 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
-            <div className="flex flex-col w-full h-full -space-y-1 text-2xl font-light text-black uppercase font-Lato">
+            <div className="flex flex-col w-full h-full -space-y-3 text-2xl font-light text-black uppercase font-Lato">
               <p className="tracking-tight">Jonas</p>
               <p className="tracking-tighter">Sontheim</p>
               <div className="w-screen h-auto pr-8 md:hidden">
