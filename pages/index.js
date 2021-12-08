@@ -8,16 +8,16 @@ export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div className="flex w-full h-screen p-8 md:p-12 ">
+      <div className="flex w-full h-screen p-4 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-1 text-2xl font-light text-black uppercase font-Lato">
               <p className="tracking-tight">Jonas</p>
               <p className="tracking-tighter">Sontheim</p>
-              <div className="w-screen h-full pr-8 md:hidden">
+              <div className="w-screen h-auto pr-8 md:hidden">
                 <div
                   onClick={() => setIsOpen(true)}
-                  className="w-full h-full my-4 "
+                  className="w-full h-auto mt-4 "
                 >
                   <Image
                     width={724}
@@ -27,6 +27,30 @@ export default function Home() {
                   />
                 </div>
               </div>
+              <div className="flex flex-row justify-between pr-4 mt-4 -mb-4 text-base md:hidden">
+                <div className="flex flex-col mt-8 text-black ">
+                  <p className="-mb-2 text-4xl uppercase font-cormorant md:text-8xl md:hidden">
+                    hof
+                  </p>
+                  <p className="text-4xl uppercase font-cormorant md:text-8xl">
+                    on
+                  </p>
+                  <p className="-mt-2 -mb-3 text-4xl uppercase font-cormorant md:text-8xl">
+                    film
+                  </p>
+                </div>
+                <nav className="flex flex-row items-end ml-6 mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
+                  <ul className="flex flex-row space-x-3">
+                    <Link href="/gallery">
+                      <a>
+                        <li>gallery</li>
+                      </a>
+                    </Link>
+                    <li>prints</li>
+                    <li>about</li>
+                  </ul>
+                </nav>
+              </div>
             </div>
 
             <div className="hidden w-1/2 h-full text-4xl text-right uppercase font-cormorant md:text-8xl md:block ">
@@ -34,7 +58,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-row justify-between pr-4 mt-4 -mb-4">
+          <div className="flex-row justify-between hidden pr-4 mt-4 -mb-4 md:flex">
             <div className="flex flex-col text-black ">
               <p className="-mb-2 text-4xl uppercase font-cormorant md:text-8xl md:hidden">
                 hof
