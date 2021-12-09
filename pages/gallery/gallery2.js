@@ -25,19 +25,19 @@ export default function Gallery2() {
 
   const photos = [
     {
-      src: "/120/1-instagram.jpg",
-      width: 2160,
-      height: 2125,
+      src: "/120-small/mixed120 (8).jpg",
+      width: 1000,
+      height: 984,
     },
     {
-      src: "/120/2-instagram.jpg",
-      width: 2160,
-      height: 2125,
+      src: "/120-small/mixed120 (4).jpg",
+      width: 1000,
+      height: 988,
     },
     {
-      src: "/120/3-instagram-2.jpg",
-      width: 2160,
-      height: 2125,
+      src: "/120-small/mixed120 (2).jpg",
+      width: 1000,
+      height: 984,
     },
   ];
 
@@ -55,11 +55,16 @@ export default function Gallery2() {
       </Mobile>
       <Desktop>
         <GalleryWrapper page="02" href="/gallery/gallery3">
-          <div className="h-screen p-8 mb-20 ">
+          <div className="h-full p-8 mb-20 ">
             <div className="w-3/4">
               <Gallery photos={photos} />
             </div>
           </div>
+          <p className="max-w-xs mx-10 text-base font-lato">
+            Flexaret VI - portra160 <br />
+            (scan date) october 2020 <br />
+            bike ride, self timer test(thats me!), view from my old room
+          </p>
         </GalleryWrapper>
       </Desktop>
     </div>

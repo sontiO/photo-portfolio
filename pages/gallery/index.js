@@ -33,7 +33,7 @@ export default function Gallery() {
         <Desktop>
           <Link href="/">
             <a>
-              <div className="flex flex-col -space-y-2">
+              <div className="flex flex-col -space-y-2 ">
                 <p className="tracking-tight">Jonas</p>
                 <p className="tracking-tighter">Sontheim</p>
               </div>

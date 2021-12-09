@@ -25,20 +25,20 @@ export default function gallery3() {
 
   const photos = [
     {
-      src: "/120/cSticht-instagram.jpg",
-      width: 2160,
-      height: 2125,
+      src: "/120-small/mixed120 (5).jpg",
+      width: 1000,
+      height: 1002,
     },
 
     {
-      src: "/120/DSC_0423-instagram.jpg",
-      width: 2160,
-      height: 2125,
+      src: "/120-small/mixed120 (14).jpg",
+      width: 1000,
+      height: 990,
     },
     {
-      src: "/120/goodone-instagram.jpg",
-      width: 2160,
-      height: 2125,
+      src: "/120-small/mixed120 (11).jpg",
+      width: 1000,
+      height: 993,
     },
   ];
 
@@ -59,6 +59,10 @@ export default function gallery3() {
           <div className="grid p-8 place-items-end">
             <div className="w-3/4">
               <Gallery photos={photos} />
+              <p className="max-w-xs mt-10 text-base text-left font-lato">
+                Flexaret VI - portra160 <br />
+                foggy morning, boat rental, summer evening - at untreusee
+              </p>
             </div>
           </div>
         </GalleryWrapper>
