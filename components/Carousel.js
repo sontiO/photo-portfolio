@@ -4,7 +4,9 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
 export const EmblaCarousel = ({ images }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [
+    Autoplay(true),
+  ]);
   return (
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">

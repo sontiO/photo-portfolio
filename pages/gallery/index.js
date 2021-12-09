@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import GalleryWrapper from "../../components/GalleryWrapper";
+import { EmblaCarousel } from "../../components/Carousel";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -21,11 +22,7 @@ export default function Gallery() {
     setModalOpen(true);
   }
 
-  var imageData = [
-    "/bentunnel.jpg",
-    "/boatnebel.jpg",
-    "/underExposeOverDevfoma100008-instagram.jpg",
-  ];
+  var imageData = ["/beninTrees.jpg", "/tungintrees.jpg"];
   return (
     <div className="w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
       <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
@@ -75,7 +72,9 @@ export default function Gallery() {
 
         <Mobile>
           <GalleryWrapper page="01" href="/gallery/gallery2">
-            <div className="mt-48 font-cormorant">gallerly mobile view tbd</div>
+            <div className="flex items-center justify-center h-screen -mt-24 ">
+              <EmblaCarousel images={imageData} />
+            </div>
           </GalleryWrapper>
         </Mobile>
       </div>
