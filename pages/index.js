@@ -2,12 +2,26 @@ import Image from "next/image";
 import PicturePreview from "https://framer.com/m/PicturePreview-Sh2e.js@skUhXXVfzXVGPcfiCx0q";
 import Modal from "../components/Modal";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
+
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: 0 },
+};
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <motion.div
+      variants={variants} // Pass the variant object into Framer Motion
+      initial="hidden" // Set the initial state to variants.hidden
+      animate="enter" // Animated state to variants.enter
+      exit="exit" // Exit state (used later) to variants.exit
+      transition={{ type: "linear" }} // Set the transition to linear
+      duration={5}
+    >
       <div className="flex w-full h-screen p-8 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
@@ -115,6 +129,6 @@ export default function Home() {
           <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

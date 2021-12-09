@@ -2,19 +2,21 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import PageTransition from "./PageTransition";
 
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
+};
+
 export default function GalleryWrapper({ children, page, href }) {
   return (
     <PageTransition>
       <motion.div
-        initial={{ opacity: 0, y: 8 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.4,
-            ease: [0.61, 1, 0.88, 1],
-          },
-        }}
+        variants={variants} // Pass the variant object into Framer Motion
+        initial="hidden" // Set the initial state to variants.hidden
+        animate="enter" // Animated state to variants.enter
+        exit="exit" // Exit state (used later) to variants.exit
+        transition={{ type: "linear" }} // Set the transition to linear
       >
         <div className="relative w-screen h-screen overflow-x-hidden overflow-y-hidden ">
           <div className="text-2xl font-light text-black uppercase font-Lato">

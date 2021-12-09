@@ -75,7 +75,7 @@ function PictureView() {
   return (
     <div className="w-full h-full">
       <div className="flex flex-col h-3/5">
-        <EmblaCarousel images={imageData} />
+        <EmblaCarousel images={imageData} width={1620} height={1147} />
       </div>
       <div className="flex flex-row justify-between mx-6 my-4">
         <div className="flex flex-col -space-y-1 ">

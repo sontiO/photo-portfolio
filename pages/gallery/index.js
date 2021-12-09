@@ -25,7 +25,7 @@ export default function Gallery() {
   var imageData = ["/beninTrees.jpg", "/tungintrees.jpg"];
   return (
     <div className="w-screen h-screen overflow-x-hidden overflow-y-hidden ">
-      <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
+      <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 p-0 text-2xl font-light text-black uppercase font-Lato md:p-12">
         <Desktop>
           <Link href="/">
             <a>
