@@ -1,13 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import PicturePreview from "https://framer.com/m/PicturePreview-RRrz.js@B7wzXOg2xPIuA6Xwqazp";
 import { ChevronLeftIcon } from "@heroicons/react/solid";
 
-import Image from "next/image";
 import { EmblaCarousel } from "./Carousel";
 
-export default function Example({ isOpen, setIsOpen, image }) {
+export default function Example({ isOpen, setIsOpen }) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -67,16 +65,17 @@ export default function Example({ isOpen, setIsOpen, image }) {
 }
 
 function PictureView() {
+  const imageData = [
+    "/bikerinpark.jpg",
+    "/foggysky.jpg",
+    "/sittingWben.jpg",
+    "/fogboat.jpg",
+    "/fogboat2.jpg",
+  ];
   return (
     <div className="w-full h-full">
       <div className="flex flex-col h-3/5">
-        {/*         <Image
-          src="/underExposeOverDevfoma100008-instagram.jpg"
-          width={1129}
-          height={1153}
-          priority={true}
-        /> */}
-        <EmblaCarousel />
+        <EmblaCarousel images={imageData} />
       </div>
       <div className="flex flex-row justify-between mx-6 my-4">
         <div className="flex flex-col -space-y-1 ">

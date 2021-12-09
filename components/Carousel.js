@@ -3,57 +3,24 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
-export const EmblaCarousel = () => {
+export const EmblaCarousel = ({ images }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
   return (
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
-        <div className="embla__slide">
-          {" "}
-          <Image
-            src="/bikerinpark.jpg"
-            width={1620}
-            height={1147}
-            priority={true}
-          />
-        </div>
-        <div className="embla__slide">
-          {" "}
-          <Image
-            src="/foggysky.jpg"
-            width={1620}
-            height={1147}
-            priority={true}
-          />
-        </div>
-
-        <div className="embla__slide">
-          <Image
-            src="/sittingWben.jpg"
-            width={1620}
-            height={1147}
-            priority={true}
-          />
-        </div>
-        <div className="embla__slide">
-          {" "}
-          <Image
-            src="/fogboat.jpg"
-            width={1620}
-            height={1147}
-            priority={true}
-          />
-        </div>
-        <div className="embla__slide">
-          {" "}
-          <Image
-            src="/fogboat2.jpg"
-            width={1620}
-            height={1147}
-            priority={true}
-          />
-        </div>
+        {images.map((img) => {
+          return <EmblaSlide img={img} />;
+        })}
       </div>
     </div>
   );
 };
+
+function EmblaSlide({ img }) {
+  return (
+    <div className="embla__slide">
+      {" "}
+      <Image src={img} width={1620} height={1147} priority={true} />
+    </div>
+  );
+}

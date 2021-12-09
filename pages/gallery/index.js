@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import ReactPhotoGrid from "react-photo-grid";
 import { useMediaQuery } from "react-responsive";
 import GalleryWrapper from "../../components/GalleryWrapper";
 
@@ -48,8 +47,7 @@ export default function Gallery() {
           </div>
           <div className="overflow-hidden ">
             <p className="max-w-xs text-base mt-52 font-lato">
-              fomapan200 developed in <br />
-              kodak d-76. circa september 2020 <br />
+              fomapan200 developed in kodak d-76. circa september 2020 <br />
               Shot on Minolta X-570
             </p>
             <Link className="visible block" href="/gallery/gallery2">
