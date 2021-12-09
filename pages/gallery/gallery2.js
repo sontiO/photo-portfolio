@@ -55,7 +55,7 @@ export default function Gallery2() {
       </Mobile>
       <Desktop>
         <GalleryWrapper page="02" href="/gallery/gallery3">
-          <div className="h-full p-8 mb-20 ">
+          <div className="h-full p-8 ">
             <div className="w-3/4">
               <Gallery photos={photos} />
             </div>
