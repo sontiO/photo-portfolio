@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
-export const EmblaCarousel = ({ images }) => {
+export const EmblaCarousel = ({ images, width, height }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [
     Autoplay(true),
   ]);
@@ -11,18 +11,18 @@ export const EmblaCarousel = ({ images }) => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {images.map((img) => {
-          return <EmblaSlide img={img} />;
+          return <EmblaSlide width={width} height={height} img={img} />;
         })}
       </div>
     </div>
   );
 };
 
-function EmblaSlide({ img }) {
+function EmblaSlide({ img, width, height }) {
   return (
     <div className="embla__slide">
       {" "}
-      <Image src={img} width={1620} height={1147} priority={true} />
+      <Image src={img} width={width} height={height} priority={true} />
     </div>
   );
 }

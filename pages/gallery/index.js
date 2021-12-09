@@ -24,7 +24,7 @@ export default function Gallery() {
 
   var imageData = ["/beninTrees.jpg", "/tungintrees.jpg"];
   return (
-    <div className="w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
+    <div className="w-screen h-screen overflow-x-hidden overflow-y-hidden ">
       <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
         <Desktop>
           <Link href="/">
@@ -73,7 +73,7 @@ export default function Gallery() {
         <Mobile>
           <GalleryWrapper page="01" href="/gallery/gallery2">
             <div className="flex items-center justify-center h-screen -mt-24 ">
-              <EmblaCarousel images={imageData} />
+              <EmblaCarousel images={imageData} width={1620} height={1147} />
             </div>
           </GalleryWrapper>
         </Mobile>

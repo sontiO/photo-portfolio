@@ -8,7 +8,7 @@ export default function Home() {
   let [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div className="flex w-full h-screen p-4 md:p-12 ">
+      <div className="flex w-full h-screen p-8 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-2 text-2xl font-light text-black uppercase font-Lato">

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import Gallery from "react-photo-gallery";
+import { EmblaCarousel } from "../../components/Carousel";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -23,7 +24,7 @@ export default function Gallery2() {
     setModalOpen(true);
   }
 
-  const photos = [
+  const imageData = [
     {
       src: "/120-small/mixed120 (8).jpg",
       width: 1000,
@@ -44,11 +45,12 @@ export default function Gallery2() {
   return (
     <div>
       <Mobile>
-        <div className="w-screen h-screen p-8 overflow-x-hidden overflow-y-hidden md:p-12">
-          <div className="grid w-full h-full grid-cols-2 grid-rows-2 gap-8 text-2xl font-light text-black uppercase font-Lato">
-            <GalleryWrapper page="02">
-              {" "}
-              <div className="mt-48 font-cormorant">gallerly 2 mobile tbd</div>
+        <div className="h-screen overflow-y-hidden">
+          <div className="grid w-full h-full ">
+            <GalleryWrapper page="02" href="/gallery/gallery3">
+              <div className="flex items-center justify-center h-screen -mt-24 ">
+                <EmblaCarousel images={imageData} width={1000} height={988} />
+              </div>
             </GalleryWrapper>
           </div>
         </div>
@@ -57,7 +59,7 @@ export default function Gallery2() {
         <GalleryWrapper page="02" href="/gallery/gallery3">
           <div className="h-full p-8 ">
             <div className="w-3/4">
-              <Gallery photos={photos} />
+              <Gallery photos={imageData} />
             </div>
           </div>
           <p className="max-w-xs mx-10 text-base font-lato">

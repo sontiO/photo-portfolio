@@ -20,7 +20,7 @@ export default function GalleryWrapper({ children, page, href }) {
           <div className="text-2xl font-light text-black uppercase font-Lato">
             <Link href="/">
               <a>
-                <div className="flex flex-col -space-y-2 md:p-12">
+                <div className="flex flex-col p-8 -space-y-2 md:p-12">
                   <p className="tracking-tight">Jonas</p>
                   <p className="tracking-tighter">Sontheim</p>
                 </div>
