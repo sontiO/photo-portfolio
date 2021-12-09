@@ -20,7 +20,7 @@ export default function Home() {
       animate="enter" // Animated state to variants.enter
       exit="exit" // Exit state (used later) to variants.exit
       transition={{ type: "linear" }} // Set the transition to linear
-      duration={5}
+      duration={7}
     >
       <div className="flex w-full h-screen p-8 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
