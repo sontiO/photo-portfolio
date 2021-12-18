@@ -5,10 +5,16 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const variants = {
+/* const variants = {
   hidden: { opacity: 0, x: 0, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
   exit: { opacity: 0, x: 0, y: 0 },
+}; */
+
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
 };
 
 export default function Home() {
@@ -22,12 +28,16 @@ export default function Home() {
       transition={{ type: "linear" }} // Set the transition to linear
       duration={7}
     >
-      <div className="flex w-full h-screen p-8 md:p-12 ">
+      <div className="flex w-full h-screen p-4 md:p-12 ">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-2 text-2xl font-light text-black uppercase font-Lato">
-              <p className="tracking-tight">Jonas</p>
-              <p className="tracking-tighter">Sontheim</p>
+              <Link href="/">
+                <a className="-space-y-2">
+                  <p className="tracking-tight">Jonas</p>
+                  <p className="tracking-tighter">Sontheim</p>
+                </a>
+              </Link>
               <div className="w-screen h-auto pr-8 md:hidden">
                 <div
                   onClick={() => setIsOpen(true)}
@@ -60,8 +70,16 @@ export default function Home() {
                         <li>gallery</li>
                       </a>
                     </Link>
-                    <li>prints</li>
-                    <li>about</li>
+                    <Link href="/prints">
+                      <a>
+                        <li>prints</li>
+                      </a>
+                    </Link>
+                    <Link href="/about">
+                      <a>
+                        <li>about</li>
+                      </a>
+                    </Link>
                   </ul>
                 </nav>
               </div>
@@ -91,8 +109,16 @@ export default function Home() {
                     <li>gallery</li>
                   </a>
                 </Link>
-                <li>prints</li>
-                <li>about</li>
+                <Link href="/prints">
+                  <a>
+                    <li>prints</li>
+                  </a>
+                </Link>
+                <Link href="/about">
+                  <a>
+                    <li>about</li>
+                  </a>
+                </Link>
               </ul>
             </nav>
           </div>

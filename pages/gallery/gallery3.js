@@ -57,7 +57,7 @@ export default function gallery3() {
         </div>
       </Mobile>
       <Desktop>
-        <GalleryWrapper page="03" href="/gallery/gallery4">
+        <GalleryWrapper page="03" href="/">
           <div className="grid p-8 place-items-end">
             <div className="w-3/4">
               <Gallery photos={imageData} />

@@ -65,7 +65,7 @@ export default function Gallery2() {
           <p className="max-w-xs mx-10 text-base font-lato">
             Flexaret VI - portra160 <br />
             (scan date) october 2020 <br />
-            bike ride, self timer test(thats me!), view from my old room
+            bike ride, self timer test, view from my old room
           </p>
         </GalleryWrapper>
       </Desktop>
