@@ -34,25 +34,17 @@ export default function About() {
                     onClick={() => setIsOpen(true)}
                     className="w-full h-auto mt-4 "
                   >
-                    <Image
-                      width={1137}
-                      height={1675}
-                      src="/me.jpg"
-                      priority
-                      layout="responsive"
-                    />
+                    {/* //Image here */}
                   </div>
                 </div>
-                <div className="flex flex-row justify-between pr-4 mt-4 -mb-4 text-base md:hidden">
+                <div className="flex flex-col justify-between pr-4 mt-4 -mb-4 text-base md:hidden">
                   <div className="flex flex-col mt-8 text-black ">
-                    <Image
-                      width={1137}
-                      height={1675}
-                      src="/me.jpg"
-                      priority
-                      layout="responsive"
-                    />
+                    {/* //Image here */}
                   </div>
+                  <div className="h-full py-6 mb-auto bg-red-300 ">
+                    WIP print page
+                  </div>
+
                   <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
                     <ul className="flex flex-row space-x-3">
                       <Link href="/gallery">
@@ -65,7 +57,11 @@ export default function About() {
                           <li>prints</li>
                         </a>
                       </Link>
-                      <li>about</li>
+                      <Link href="/about">
+                        <a>
+                          <li>about</li>
+                        </a>
+                      </Link>
                     </ul>
                   </nav>
                 </div>
@@ -89,7 +85,7 @@ export default function About() {
                 </a>
               </Link>
               <li>prints</li>
-              <Link href="/gallery">
+              <Link href="/about">
                 <a>
                   <li>about</li>
                 </a>

@@ -53,6 +53,7 @@ export default function About() {
                       layout="responsive"
                     />
                   </div>
+                  <div className="h-full py-6 mb-8">WIP about page</div>
                   <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
                     <ul className="flex flex-row space-x-3">
                       <Link href="/gallery">
