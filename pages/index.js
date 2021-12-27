@@ -38,7 +38,7 @@ export default function Home() {
                   <p className="tracking-tighter">Sontheim</p>
                 </a>
               </Link>
-              <div className="w-screen h-auto pr-8 md:hidden">
+              <div className="w-full h-auto md:hidden">
                 <div
                   onClick={() => setIsOpen(true)}
                   className="w-full h-auto mt-4 "
