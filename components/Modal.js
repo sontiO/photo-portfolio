@@ -2,7 +2,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ChevronLeftIcon } from "@heroicons/react/solid";
-
 import { EmblaCarousel } from "./Carousel";
 
 export default function Example({ isOpen, setIsOpen }) {

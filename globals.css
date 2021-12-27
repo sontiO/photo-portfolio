@@ -8,6 +8,11 @@
   }
   .embla__container {
     display: flex;
+    grid-auto-flow: row;
+  }
+  .embla__slide_120 {
+    position: relative;
+    flex: 0 0 600px;
   }
   .embla__slide_120 {
     position: relative;

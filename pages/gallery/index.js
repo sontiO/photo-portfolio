@@ -52,13 +52,12 @@ export default function Gallery() {
             <div className="">
               <Image src="/tungintrees.jpg" width={1620} height={1147} />
             </div>
-            <div className="overflow-show ">
-              {" "}
+            <div className="-mt-28 overflow-show">
               <Image src="/beninTrees.jpg" width={1620} height={1147} />
             </div>
-            <div className="overflow-hidden ">
-              <p className="max-w-xs text-base mt-52 font-lato">
-                fomapan200 developed in kodak d-76. circa september 2020 <br />
+            <div className="grid w-full overflow-hidden place-items-center">
+              <p className="max-w-sm text-base mt-52 font-lato">
+                fomapan200 developed <br /> in kodak d-76 <br />
                 Shot on Minolta X-570
               </p>
               <Link className="visible block" href="/gallery/gallery2">
@@ -86,7 +85,7 @@ export default function Gallery() {
 
           <Mobile>
             <GalleryWrapper page="01" href="/gallery/gallery2">
-              <div className="flex items-center justify-center h-screen p-4 -mt-24">
+              <div className="flex items-center justify-center h-screen p-4 -mt-24 ">
                 <EmblaCarousel
                   images={imageData}
                   width={1620}

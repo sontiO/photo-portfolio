@@ -8,6 +8,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "clsx": "^1.1.1",
     "embla-carousel-autoplay": "^6.0.2",
     "embla-carousel-react": "^6.0.2",
     "framer": "^2.0.0-beta.13",
@@ -15,6 +16,7 @@
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-fullscreen-image": "^0.0.3",
     "react-photo-gallery": "^8.0.0",
     "react-photo-grid": "^1.4.11",
     "react-responsive": "^9.0.0-beta.5"

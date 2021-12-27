@@ -1,8 +1,6 @@
 import GalleryWrapper from "./../../components/GalleryWrapper";
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import Gallery from "react-photo-gallery";
 import { EmblaCarousel } from "../../components/Carousel";
@@ -27,18 +25,27 @@ export default function Gallery2() {
   const imageData = [
     {
       src: "/120-small/mixed120 (8).jpg",
+      thumbnail: "/120-small/mixed120 (8).jpg",
       width: 1000,
       height: 984,
+      thumbnailWidth: 1000,
+      thumbnailHeight: 984,
     },
     {
       src: "/120-small/mixed120 (4).jpg",
+      thumbnail: "/120-small/mixed120 (8).jpg",
       width: 1000,
       height: 988,
+      thumbnailWidth: 1000,
+      thumbnailHeight: 988,
     },
     {
       src: "/120-small/mixed120 (2).jpg",
+      thumbnail: "/120-small/mixed120 (8).jpg",
       width: 1000,
       height: 984,
+      thumbnailWidth: 1000,
+      thumbnailHeight: 984,
     },
   ];
 
@@ -70,7 +77,6 @@ export default function Gallery2() {
           <p className="max-w-xs mx-10 text-base font-lato">
             Flexaret VI - portra160 <br />
             (scan date) october 2020 <br />
-            bike ride, self timer test, view from my old room
           </p>
         </GalleryWrapper>
       </Desktop>

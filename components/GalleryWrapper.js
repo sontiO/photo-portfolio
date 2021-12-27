@@ -32,7 +32,7 @@ export default function GalleryWrapper({ children, page, href }) {
             <div>
               <Link href={href}>
                 <a>
-                  <p className="absolute bottom-8 right-20 md:right-36">
+                  <p className="absolute bottom-8 right-5 md:right-36">
                     {page}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
