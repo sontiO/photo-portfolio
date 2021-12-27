@@ -87,7 +87,12 @@ export default function Gallery() {
           <Mobile>
             <GalleryWrapper page="01" href="/gallery/gallery2">
               <div className="flex items-center justify-center h-screen p-4 -mt-24">
-                <EmblaCarousel images={imageData} width={1620} height={1147} />
+                <EmblaCarousel
+                  images={imageData}
+                  width={1620}
+                  height={1147}
+                  for120={false}
+                />
               </div>
             </GalleryWrapper>
           </Mobile>

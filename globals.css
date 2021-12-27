@@ -9,9 +9,13 @@
   .embla__container {
     display: flex;
   }
-  .embla__slide {
+  .embla__slide_120 {
     position: relative;
     flex: 0 0 100%;
+  }
+  .embla__slide_35 {
+    position: relative;
+    flex: 0 0 620px;
   }
   ,
   @variants responsive {

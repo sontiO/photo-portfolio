@@ -49,7 +49,12 @@ export default function Gallery2() {
           <div className="grid w-full h-full ">
             <GalleryWrapper page="02" href="/gallery/gallery3">
               <div className="flex items-center justify-center h-screen p-4 -mt-24">
-                <EmblaCarousel images={imageData} width={1000} height={988} />
+                <EmblaCarousel
+                  images={imageData}
+                  width={1000}
+                  height={988}
+                  for120={true}
+                />
               </div>
             </GalleryWrapper>
           </div>
