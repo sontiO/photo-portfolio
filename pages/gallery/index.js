@@ -56,6 +56,7 @@ export default function Gallery() {
               <Image src="/beninTrees.jpg" width={1620} height={1147} />
             </div>
             <div className="grid w-full overflow-hidden place-items-center">
+              {/* //old paragraph position */}
               <p className="max-w-sm text-base mt-52 font-lato">
                 fomapan200 developed <br /> in kodak d-76 <br />
                 Shot on Minolta X-570
