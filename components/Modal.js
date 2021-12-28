@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { ChevronLeftIcon } from "@heroicons/react/solid";
 import { EmblaCarousel } from "./Carousel";
 
-export default function Example({ isOpen, setIsOpen }) {
+export default function Modal({ isOpen, setIsOpen }) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -12,7 +12,7 @@ export default function Example({ isOpen, setIsOpen }) {
         className="fixed inset-0 z-10 overflow-y-auto"
         onClose={setIsOpen}
       >
-        <div className="flex items-end justify-center min-h-screen pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-end justify-center min-h-screen pb-20 mt-4 text-center 5s:mt-0 sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -41,11 +41,11 @@ export default function Example({ isOpen, setIsOpen }) {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform scale-90 bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
+            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
               <div className="">
                 <PictureView />
               </div>
-              <div className="mt-4 sm:mt-6">
+              <div className="ml-4 -mt-10 5s:mt-4 5s:ml-0 sm:mt-6">
                 <button
                   type="button"
                   className="inline-flex justify-start w-full px-4 py-2 text-base font-light text-gray-700 rounded-md font-lato focus:outline-none "
@@ -72,11 +72,16 @@ function PictureView() {
     "/fogboat2.jpg",
   ];
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full scale-75 5s:scale-100">
       <div className="flex flex-col h-3/5">
-        <EmblaCarousel images={imageData} width={1620} height={1147} />
+        <EmblaCarousel
+          images={imageData}
+          width={1620}
+          height={1147}
+          for120={false}
+        />
       </div>
-      <div className="flex flex-row justify-between mx-6 my-4">
+      <div className="flex flex-row justify-between my-4 5s:mx-6">
         <div className="flex flex-col -space-y-1 ">
           <p className="font-medium font-Lato">Fomapan 100</p>
           <div className="flex flex-col -space-y-2">

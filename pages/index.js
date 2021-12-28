@@ -28,7 +28,7 @@ export default function Home() {
       transition={{ type: "linear" }} // Set the transition to linear
       duration={7}
     >
-      <div className="flex w-full h-screen p-4 bg-blue-400 md:p-12">
+      <div className="flex w-full h-screen p-4 md:p-12">
         <div className="flex flex-col justify-between md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-2 text-2xl font-light text-black uppercase font-Lato">
@@ -63,7 +63,7 @@ export default function Home() {
                     film
                   </p>
                 </div>
-                <nav className="flex flex-row items-end w-full mt-12 mb-6 text-sm 5s:-mb-3 5s:text-xl ">
+                <nav className="flex flex-row w-full mt-24 mb-6 text-sm 5s:text-xl ">
                   <ul className="flex flex-row space-x-3">
                     <Link href="/gallery">
                       <a>
@@ -102,7 +102,7 @@ export default function Home() {
                 film
               </p>
             </div>
-            <nav className="flex flex-row items-end ml-6 mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
+            <nav className="flex flex-row items-end ml-6 mr-4 -mb-2.5 space-x-3 text-black md:-mb-0 md:mr-0">
               <ul className="flex flex-row space-x-3">
                 <Link href="/gallery">
                   <a>
