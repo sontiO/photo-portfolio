@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     screens: {
-      "5s": "320",
+      "5s": "321px",
       ...defaultTheme.screens,
     },
   },

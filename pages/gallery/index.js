@@ -57,7 +57,7 @@ export default function Gallery() {
             </div>
             <div className="grid w-full overflow-hidden place-items-center">
               {/* //old paragraph position */}
-              <p className="max-w-sm text-base mt-52 font-lato">
+              <p className="max-w-sm -ml-24 text-base mt-52 font-lato">
                 fomapan200 developed <br /> in kodak d-76 <br />
                 Shot on Minolta X-570
               </p>
