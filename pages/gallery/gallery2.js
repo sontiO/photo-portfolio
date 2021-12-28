@@ -54,7 +54,7 @@ export default function Gallery2() {
       <Mobile>
         <div className="h-screen overflow-y-hidden">
           <div className="grid w-full h-full ">
-            <GalleryWrapper page="02" href="/gallery/gallery3">
+            <GalleryWrapper page="02" href="/gallery/gallery3" for120={true}>
               <div className="flex items-center justify-center h-screen p-4 -mt-24">
                 <EmblaCarousel
                   images={imageData}

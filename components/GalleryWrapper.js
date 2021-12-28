@@ -8,7 +8,12 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 0 },
 };
 
-export default function GalleryWrapper({ children, page, href }) {
+export default function GalleryWrapper({
+  children,
+  page,
+  href,
+  for120 = false,
+}) {
   return (
     <PageTransition>
       <motion.div
@@ -32,7 +37,11 @@ export default function GalleryWrapper({ children, page, href }) {
             <div>
               <Link href={href}>
                 <a>
-                  <p className="absolute bottom-8 right-12 md:right-36">
+                  <p
+                    className={`absolute mr-1 bottom-8 md:right-36 ${
+                      for120 ? "right-4" : "right-16"
+                    }`}
+                  >
                     {page}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
