@@ -48,7 +48,7 @@ export default function Modal({ isOpen, setIsOpen }) {
               <div className="ml-4 -mt-10 5s:mt-4 5s:ml-0 sm:mt-6">
                 <button
                   type="button"
-                  className="inline-flex justify-start w-full px-4 py-2 text-base font-light text-gray-700 rounded-md font-lato focus:outline-none "
+                  className="inline-flex justify-start w-full py-2 -mx-2 text-base font-light text-gray-700 rounded-md 5s:mx-0 5s:px-4 font-lato focus:outline-none "
                   onClick={() => setIsOpen(false)}
                 >
                   <ChevronLeftIcon className="w-6 h-6 text-gray-600" />
@@ -72,7 +72,7 @@ function PictureView() {
     "/fogboat2.jpg",
   ];
   return (
-    <div className="w-full h-full scale-75 5s:scale-100">
+    <div className="w-full h-full scale-90 5s:scale-100">
       <div className="flex flex-col h-3/5">
         <EmblaCarousel
           images={imageData}

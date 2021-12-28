@@ -86,7 +86,7 @@ export default function Gallery() {
 
           <Mobile>
             <GalleryWrapper page="01" href="/gallery/gallery2">
-              <div className="flex items-center justify-center h-screen p-4 -mt-24 ">
+              <div className="flex items-center justify-center h-screen p-4 -mt-24 scale-90 5s:scale-100">
                 <EmblaCarousel
                   images={imageData}
                   width={1620}

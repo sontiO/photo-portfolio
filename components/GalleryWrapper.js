@@ -40,7 +40,7 @@ export default function GalleryWrapper({
               <Link href={href}>
                 <a>
                   <p
-                    className={`absolute mr-1 bottom-8 md:right-36 ${
+                    className={`absolute mr-1 bottom-6 md:right-36 ${
                       for120 ? "right-4" : "right-16"
                     }`}
                   >

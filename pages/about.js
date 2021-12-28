@@ -18,42 +18,25 @@ export default function About() {
       transition={{ type: "linear" }} // Set the transition to linear
       duration={7}
     >
-      <div className="flex w-full h-screen p-8 md:p-12 ">
-        <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
+      <div className="flex w-full h-screen md:p-12 ">
+        <div className="flex flex-col justify-between w-full md:w-4/6 ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-2 text-2xl font-light text-black uppercase font-Lato">
               <div>
-                <Link href="/">
-                  <a className="-space-y-2">
-                    <p className="tracking-tight">Jonas</p>
-                    <p className="tracking-tighter">Sontheim</p>
-                  </a>
-                </Link>
-                <div className="h-auto md:hidden">
-                  <div
-                    onClick={() => setIsOpen(true)}
-                    className="w-full h-auto mt-4 "
-                  >
-                    <Image
-                      width={1137}
-                      height={1675}
-                      src="/me.jpg"
-                      priority
-                      layout="responsive"
-                    />
-                  </div>
+                <div className="p-8">
+                  <Link href="/">
+                    <a className="-space-y-2">
+                      <p className="tracking-tight">Jonas</p>
+                      <p className="tracking-tighter">Sontheim</p>
+                    </a>
+                  </Link>
                 </div>
-                <div className="flex flex-row justify-between pr-4 mt-4 -mb-4 text-base md:hidden">
-                  <div className="flex flex-col mt-8 text-black ">
-                    <Image
-                      width={1137}
-                      height={1675}
-                      src="/me.jpg"
-                      priority
-                      layout="responsive"
-                    />
-                  </div>
-                  <div className="h-full py-6 mb-8">WIP about page</div>
+                <div className="w-full h-full -mt-10 scale-90 place-items-center">
+                  <Image src="/me.jpg" width={650} height={958} />
+                  <p className="mt-8">Testparagraph</p>
+                </div>
+
+                <div className="flex flex-row justify-between pr-4 mx-8 mt-4 -mb-4 text-base md:hidden">
                   <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
                     <ul className="flex flex-row space-x-3">
                       <Link href="/gallery">
