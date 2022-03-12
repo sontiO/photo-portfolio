@@ -26,8 +26,8 @@ export default function GalleryWrapper({
         <div className="relative w-screen h-screen overflow-x-hidden overflow-y-hidden ">
           <div className="flex flex-col text-2xl font-light text-black uppercase font-Lato">
             <div className="flex-none">
-              <Link href="/about">
-                <a>
+              <Link href="/">
+                <a href="/">
                   <div className="flex flex-col p-8 -space-y-2 md:p-12">
                     <p className="tracking-tight">Jonas</p>
                     <p className="tracking-tighter">Sontheim</p>

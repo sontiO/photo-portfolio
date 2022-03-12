@@ -19,7 +19,7 @@
   }
   .embla__slide_35 {
     position: relative;
-    flex: 0 0 620px;
+    flex: 0 0 100%;
   }
   ,
   @variants responsive {
