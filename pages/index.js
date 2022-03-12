@@ -55,7 +55,7 @@ export default function Home() {
                   film
                 </p>
               </div>
-              <nav className="flex flex-row w-full mt-24 mb-6 text-sm 5s:text-xl ">
+              <nav className="flex flex-row w-full mt-6 mb-6 text-sm sm:mt-24 5s:text-xl ">
                 <ul className="flex flex-row space-x-3">
                   <Link href="/gallery">
                     <a>

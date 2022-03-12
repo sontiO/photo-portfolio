@@ -31,9 +31,25 @@ export default function About() {
                     </a>
                   </Link>
                 </div>
-                <div className="w-full h-full -mt-10 scale-90 place-items-center">
+                <div className="grid w-full h-full -mt-10 scale-90 place-items-center md:hidden">
                   <Image src="/me.jpg" width={650} height={958} />
-                  <p className="mt-8">Testparagraph</p>
+                  <p className="mt-8">Im a Frontend Developer from Munich</p>
+                  <p className="mt-8 mr-10 lowercase first-letter:uppercase">
+                    I created this site to document my film photography from my
+                    time studying in hof. I will update it with more scans soon
+                  </p>
+                  <p className="mt-16 lowercase ">
+                    you can reach me at js@qlax.de
+                  </p>
+                  <p className="mt-4 lowercase">
+                    check out my dev portfolio{" "}
+                    <a
+                      className="border-b border-gray-400 "
+                      href="https://github.com/sontiO"
+                    >
+                      here
+                    </a>
+                  </p>
                 </div>
 
                 <div className="flex flex-row justify-between pr-4 mx-8 mt-4 -mb-4 text-base md:hidden">
@@ -57,21 +73,36 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex-row justify-between hidden pr-4 mt-4 -mb-4 md:flex">
-            <div className="flex flex-col text-3xl text-black">
-              work in progress ABOUT PAGE
+          <div className="flex-row justify-between hidden pr-4 -mt-40 -mb-4 md:flex">
+            <div className="flex flex-col text-black">
+              {" "}
+              <p className="mt-8 mr-10 lowercase first-letter:uppercase">
+                I created this site to document my film photography from my time
+                studying in hof. I will update it with more scans soon
+              </p>
             </div>
           </div>
         </div>
-        <div className="flex-col justify-between hidden h-full m-4 md:w-2/6 5s:w-full md:flex">
+        <div className="flex-col justify-between hidden h-full m-4 md:w-2/6 5s:w-full md:flex ">
           <div className="w-full h-full overflow-x-hidden ">
-            <Image
-              width={1137}
-              height={1675}
-              src="/me.jpg"
-              priority
-              layout="responsive"
-            />
+            <div className="grid w-full h-full -mt-10 scale-90 place-items-center ">
+              <Image src="/me.jpg" width={650} height={958} />
+              <p className="mt-8">Im a Frontend Developer from Munich</p>
+              <p className="mt-8 mr-10 lowercase first-letter:uppercase">
+                I created this site to document my film photography from my time
+                studying in hof. I will update it with more scans soon
+              </p>
+              <p className="mt-16 lowercase ">you can reach me at js@qlax.de</p>
+              <p className="mt-4 lowercase">
+                check out my dev portfolio{" "}
+                <a
+                  className="border-b border-gray-400 "
+                  href="https://github.com/sontiO"
+                >
+                  here
+                </a>
+              </p>
+            </div>
           </div>
           <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
             <ul className="flex flex-row space-x-3">

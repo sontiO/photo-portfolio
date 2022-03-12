@@ -18,7 +18,7 @@ export default function About() {
       transition={{ type: "linear" }} // Set the transition to linear
       duration={7}
     >
-      <div className="flex w-full h-screen p-8 md:p-12 ">
+      <div className="relative flex w-full h-screen p-8 md:p-12">
         <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-2 text-2xl font-light text-black uppercase font-Lato">
@@ -37,15 +37,20 @@ export default function About() {
                     {/* //Image here */}
                   </div>
                 </div>
-                <div className="flex flex-col justify-between pr-4 mt-4 -mb-4 text-base md:hidden">
+                <div className="flex flex-col justify-between pr-4 mt-4 -mb-4 text-base lowercase md:hidden">
                   <div className="flex flex-col mt-8 text-black ">
                     {/* //Image here */}
                   </div>
-                  <div className="h-full py-6 mb-auto bg-red-300 ">
-                    WIP print page
+                  <div className="h-full py-6 mb-auto ">
+                    <span className="uppercase">WIP</span> - currently selecting
+                    medium format pictures to get lab scans of
                   </div>
+                  <div className="h-full py-6 mb-auto ">
+                    Also working on optimizing my home scan setup for 35mm b&w
+                  </div>
+                  <div className="h-full py-6 mb-auto ">stay tuned</div>
 
-                  <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
+                  <nav className="absolute flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0 bottom-6">
                     <ul className="flex flex-row space-x-3">
                       <Link href="/gallery">
                         <a>
