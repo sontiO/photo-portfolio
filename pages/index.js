@@ -124,7 +124,8 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col">
-          <h2 className="w-full my-3 text-sm text-gray-700 font-Lato">
+          <h2 className="w-full pt-1 my-2 text-gray-900 ">fomapan200 in d76</h2>
+          <h2 className="w-full my-2 -mt-3 text-gray-700 ">
             more from this roll:
           </h2>
           <div
