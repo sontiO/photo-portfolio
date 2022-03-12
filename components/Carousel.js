@@ -1,17 +1,23 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import FullScreenModal from "./FullScreenModal";
 
 export const EmblaCarousel = ({ images, width, height, for120 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [
     Autoplay(true),
   ]);
 
+  const [fullScreenModalOpen, setFullScreenModalOpen] = useState(false);
+  const [selectedSlide, setSelectedSlide] = useState(images[0]);
+
   const onSlideClick = useCallback(
     (index) => {
       if (emblaApi && emblaApi.clickAllowed()) {
         console.log(images[index]);
+        setSelectedSlide(images[index]);
+        setFullScreenModalOpen(true);
       }
     },
     [emblaApi]
@@ -22,14 +28,23 @@ export const EmblaCarousel = ({ images, width, height, for120 }) => {
       <div className="embla__container">
         {images.map((img, index) => {
           return (
-            <EmblaSlide
-              width={width}
-              height={height}
-              img={img}
-              for120={for120}
-              onClick={onSlideClick}
-              index={index}
-            />
+            <div className="embla__slide_35">
+              <EmblaSlide
+                width={width}
+                height={height}
+                img={img}
+                for120={for120}
+                onClick={onSlideClick}
+                index={index}
+              />
+              <FullScreenModal
+                isOpen={fullScreenModalOpen}
+                setIsOpen={setFullScreenModalOpen}
+                image={selectedSlide}
+                width={width}
+                height={height}
+              />
+            </div>
           );
         })}
       </div>
