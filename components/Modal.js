@@ -12,7 +12,7 @@ export default function Modal({ isOpen, setIsOpen }) {
         className="fixed inset-0 z-10 overflow-y-auto"
         onClose={setIsOpen}
       >
-        <div className="flex items-end justify-center min-h-screen pb-20 mt-4 text-center 5s:mt-0 sm:block sm:p-0">
+        <div className="flex items-center justify-center min-h-screen mt-4 text-center 5s:mt-0 sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -41,7 +41,7 @@ export default function Modal({ isOpen, setIsOpen }) {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
+            <div className="inline-block w-5/6 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
               <div className="">
                 <PictureView />
               </div>
