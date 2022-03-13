@@ -16,7 +16,9 @@ export const EmblaCarousel = ({
   ]);
 
   const [fullScreenModalOpen, setFullScreenModalOpen] = useState(false);
-  const [selectedSlide, setSelectedSlide] = useState(images[0]);
+  const [selectedSlide, setSelectedSlide] = useState(
+    images[selectedImageIndex]
+  );
 
   const onSlideClick = useCallback(
     (index) => {
