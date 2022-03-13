@@ -37,6 +37,8 @@ export default function About() {
                     {/* //Image here */}
                   </div>
                 </div>
+
+                {/* //mobile content below, hidden tablet and up */}
                 <div className="flex flex-col justify-between pr-4 mt-4 -mb-4 text-base lowercase md:hidden">
                   <div className="flex flex-col mt-8 text-black ">
                     {/* //Image here */}
@@ -74,6 +76,7 @@ export default function About() {
             </div>
           </div>
 
+          {/* //desktop content below, hidden mobile */}
           <div className="flex-row justify-between hidden pr-4 mt-4 -mb-4 md:flex">
             <div className="flex flex-col text-3xl text-black">
               work in progress PRINTS PAGE
@@ -89,7 +92,11 @@ export default function About() {
                   <li>gallery</li>
                 </a>
               </Link>
-              <li>prints</li>
+              <Link href="/prints">
+                <a>
+                  <li>prints</li>
+                </a>
+              </Link>
               <Link href="/about">
                 <a>
                   <li>about</li>

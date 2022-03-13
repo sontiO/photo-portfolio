@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import homies from "../pictures/homies.jpg";
 
 const variants = {
   hidden: { opacity: 0, x: 200, y: 0 },
@@ -18,42 +19,39 @@ export default function About() {
       transition={{ type: "linear" }} // Set the transition to linear
       duration={7}
     >
-      <div className="flex w-full h-screen md:p-12 ">
-        <div className="flex flex-col justify-between w-full md:w-4/6 ">
+      <div className="relative flex w-full h-screen p-8 md:p-12">
+        <div className="flex flex-col justify-between mr-8 md:w-4/6 5s:w-full ">
           <div className="flex flex-row w-full h-full ">
             <div className="flex flex-col w-full h-full -space-y-2 text-2xl font-light text-black uppercase font-Lato">
               <div>
-                <div className="p-8">
-                  <Link href="/">
-                    <a className="-space-y-2">
-                      <p className="tracking-tight">Jonas</p>
-                      <p className="tracking-tighter">Sontheim</p>
-                    </a>
-                  </Link>
-                </div>
-                <div className="grid w-full h-full -mt-10 scale-90 place-items-center md:hidden">
-                  <Image src="/me.jpg" width={650} height={958} />
-                  <p className="mt-8">Im a Frontend Developer from Munich</p>
-                  <p className="mt-8 mr-10 lowercase first-letter:uppercase">
-                    I created this site to document my film photography from my
-                    time studying in hof. I will update it with more scans soon
-                  </p>
-                  <p className="mt-16 lowercase ">
-                    you can reach me at js@qlax.de
-                  </p>
-                  <p className="mt-4 lowercase">
-                    check out my dev portfolio{" "}
-                    <a
-                      className="border-b border-gray-400 "
-                      href="https://github.com/sontiO"
-                    >
-                      here
-                    </a>
-                  </p>
+                <Link href="/">
+                  <a className="-space-y-2">
+                    <p className="tracking-tight">Jonas</p>
+                    <p className="tracking-tighter">Sontheim</p>
+                  </a>
+                </Link>
+                <div className="h-auto md:hidden">
+                  <div
+                    onClick={() => setIsOpen(true)}
+                    className="w-full h-auto mt-4 "
+                  >
+                    {/* //Image here */}
+                  </div>
                 </div>
 
-                <div className="flex flex-row justify-between pr-4 mx-8 mt-4 -mb-4 text-base md:hidden">
-                  <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
+                {/* //mobile content below, hidden tablet and up */}
+
+                <div className="flex flex-col justify-between pr-4 mt-4 -mb-4 text-base lowercase md:hidden">
+                  <div className="flex flex-col mt-8 text-black ">
+                    {/* //Image here */}
+                  </div>
+                  <div className="h-full py-6 mb-auto ">
+                    <span className="uppercase">WIP</span> - about span
+                  </div>
+                  <div className="h-full py-6 mb-auto ">about span</div>
+                  <div className="h-full py-6 mb-auto ">stay tuned</div>
+
+                  <nav className="absolute flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0 bottom-6">
                     <ul className="flex flex-row space-x-3">
                       <Link href="/gallery">
                         <a>
@@ -65,7 +63,11 @@ export default function About() {
                           <li>prints</li>
                         </a>
                       </Link>
-                      <li>about</li>
+                      <Link href="/about">
+                        <a>
+                          <li>about</li>
+                        </a>
+                      </Link>
                     </ul>
                   </nav>
                 </div>
@@ -73,37 +75,16 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex-row justify-between hidden pr-4 -mt-40 -mb-4 md:flex">
-            <div className="flex flex-col text-black">
-              {" "}
-              <p className="mt-8 mr-10 lowercase first-letter:uppercase">
-                I created this site to document my film photography from my time
-                studying in hof. I will update it with more scans soon
-              </p>
+          {/* //desktop content below, hidden mobile */}
+
+          <div className="flex-row justify-between hidden pr-4 mt-4 -mb-4 md:flex">
+            <div className="flex flex-col text-3xl text-black">
+              work in progress ABOUT PAGE
             </div>
           </div>
         </div>
-        <div className="flex-col justify-between hidden h-full m-4 md:w-2/6 5s:w-full md:flex ">
-          <div className="w-full h-full overflow-x-hidden ">
-            <div className="grid w-full h-full -mt-10 scale-90 place-items-center ">
-              <Image src="/me.jpg" width={650} height={958} />
-              <p className="mt-8">Im a Frontend Developer from Munich</p>
-              <p className="mt-8 mr-10 lowercase first-letter:uppercase">
-                I created this site to document my film photography from my time
-                studying in hof. I will update it with more scans soon
-              </p>
-              <p className="mt-16 lowercase ">you can reach me at js@qlax.de</p>
-              <p className="mt-4 lowercase">
-                check out my dev portfolio{" "}
-                <a
-                  className="border-b border-gray-400 "
-                  href="https://github.com/sontiO"
-                >
-                  here
-                </a>
-              </p>
-            </div>
-          </div>
+        <div className="flex-col justify-between hidden h-full m-4 md:w-2/6 5s:w-full md:flex">
+          <div className="w-full h-full overflow-x-hidden "></div>
           <nav className="flex flex-row items-end mr-4 -mb-2 space-x-3 text-black md:-mb-0 md:mr-0">
             <ul className="flex flex-row space-x-3">
               <Link href="/gallery">
@@ -116,7 +97,11 @@ export default function About() {
                   <li>prints</li>
                 </a>
               </Link>
-              <li>about</li>
+              <Link href="/about">
+                <a>
+                  <li>about</li>
+                </a>
+              </Link>
             </ul>
           </nav>
         </div>
