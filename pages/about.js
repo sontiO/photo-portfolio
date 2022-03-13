@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
-import homies from "../pictures/homies.jpg";
 
 const variants = {
   hidden: { opacity: 0, x: 200, y: 0 },
