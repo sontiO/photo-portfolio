@@ -26,7 +26,7 @@ const images = [
 ];
 
 export default function Home() {
-  const [selectedImageIndex, setSelectedImageIndex] = useState();
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   function openGalleryModal(index) {
@@ -107,7 +107,7 @@ export default function Home() {
               film
             </p>
           </div>
-          <nav className="flex flex-row items-end ml-6 mr-4 -mb-2.5 space-x-3 text-black md:-mb-0 md:mr-0">
+          <nav className="flex flex-row items-end ml-6 mr-4 space-x-3 text-black md:mb-0.5 md:mr-0">
             <ul className="flex flex-row space-x-3">
               <Link href="/gallery">
                 <a>
@@ -139,7 +139,7 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-row w-full gap-3 py-2 overflow-x-hidden">
+          <div className="flex flex-row w-full gap-3 py-2 overflow-x-hidden ">
             {images.map((image, index) => {
               return (
                 <div onClick={() => openGalleryModal(index)}>
