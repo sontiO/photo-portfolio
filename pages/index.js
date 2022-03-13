@@ -17,8 +17,23 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
+const images = [
+  "/bikerinpark.jpg",
+  "/foggysky.jpg",
+  "/sittingWben.jpg",
+  "/fogboat.jpg",
+  "/fogboat2.jpg",
+];
+
 export default function Home() {
-  let [isOpen, setIsOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+
+  function openGalleryModal(index) {
+    setSelectedImageIndex(index);
+    setIsOpen(true);
+  }
+
   return (
     <div className="flex w-full h-screen p-4 md:p-12">
       <div className="flex flex-col justify-between md:w-4/6 5s:w-full ">
@@ -124,23 +139,23 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col">
-          <div
-            className="flex flex-row w-full gap-3 py-2 overflow-x-hidden"
-            onClick={() => setIsOpen(true)}
-          >
-            <PicturePreview
-              title="Fomapan 100"
-              subtitle="more from this roll:"
-              image="/bikerinpark.jpg"
-            />
-            <PicturePreview image="/foggysky.jpg" />
-            <PicturePreview image="/sittingWben.jpg" />
-            <PicturePreview image="/fogboat.jpg" />
-            <PicturePreview image="/fogboat2.jpg" />
+          <div className="flex flex-row w-full gap-3 py-2 overflow-x-hidden">
+            {images.map((image, index) => {
+              return (
+                <div onClick={() => openGalleryModal(index)}>
+                  <PicturePreview image={image} />
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Modal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          selectedImageIndex={selectedImageIndex}
+          images={images}
+        />
       </div>
     </div>
   );

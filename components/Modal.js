@@ -4,7 +4,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { ChevronLeftIcon } from "@heroicons/react/solid";
 import { EmblaCarousel } from "./Carousel";
 
-export default function Modal({ isOpen, setIsOpen }) {
+export default function Modal({
+  isOpen,
+  setIsOpen,
+  selectedImageIndex,
+  images,
+}) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -43,7 +48,10 @@ export default function Modal({ isOpen, setIsOpen }) {
           >
             <div className="inline-block w-5/6 overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:align-middle sm:max-w-3xl sm:w-full ">
               <div className="">
-                <PictureView />
+                <PictureView
+                  images={images}
+                  selectedImageIndex={selectedImageIndex}
+                />
               </div>
               <div className="ml-4 -mt-10 5s:mt-4 5s:ml-0 sm:mt-6">
                 <button
@@ -63,22 +71,16 @@ export default function Modal({ isOpen, setIsOpen }) {
   );
 }
 
-function PictureView() {
-  const imageData = [
-    "/bikerinpark.jpg",
-    "/foggysky.jpg",
-    "/sittingWben.jpg",
-    "/fogboat.jpg",
-    "/fogboat2.jpg",
-  ];
+function PictureView({ images, selectedImageIndex }) {
   return (
     <div className="w-full h-full scale-90 5s:scale-100">
       <div className="flex flex-col h-3/5">
         <EmblaCarousel
-          images={imageData}
+          images={images}
           width={1620}
           height={1147}
           for120={false}
+          selectedImageIndex={selectedImageIndex}
         />
       </div>
       <div className="flex flex-row justify-between my-4 5s:mx-6">

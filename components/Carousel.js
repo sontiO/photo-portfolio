@@ -4,7 +4,13 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import FullScreenModal from "./FullScreenModal";
 
-export const EmblaCarousel = ({ images, width, height, for120 }) => {
+export const EmblaCarousel = ({
+  images,
+  width,
+  height,
+  for120,
+  selectedImageIndex,
+}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [
     Autoplay(true),
   ]);
@@ -26,7 +32,10 @@ export const EmblaCarousel = ({ images, width, height, for120 }) => {
   return (
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
-        {images.map((img, index) => {
+        {/*before mapping over our images, we slice starting
+        //from selected image index, so the image preview 
+        //that gets clicked on is the starting image in modal embla  */}
+        {images.slice(selectedImageIndex).map((img, index) => {
           return (
             <div className="embla__slide_35">
               <EmblaSlide
